@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:clima/utilities/constants.dart';
 import '../services/weather.dart';
+import '../screens/city_screen.dart';
 
 class LocationScreen extends StatefulWidget {
   final locationWeather;
@@ -16,11 +17,17 @@ class _LocationScreenState extends State<LocationScreen> {
 
   @override
   void initState() {
-    double temp = widget.locationWeather['main']['temp'];
-    temperture = temp.toInt();
-    condition = widget.locationWeather['weather'][0]['id'];
-    cityName = widget.locationWeather['name'];
+    updateUI(widget.locationWeather);
     super.initState();
+  }
+
+  void updateUI(dynamic weatherData) {
+    setState(() {
+      double temp = weatherData['main']['temp'];
+      temperture = temp.toInt();
+      condition = weatherData['weather'][0]['id'];
+      cityName = weatherData['name'];
+    });
   }
 
   WeatherModel wheather = WeatherModel();
@@ -46,14 +53,31 @@ class _LocationScreenState extends State<LocationScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () async {
+                      var wheatherData = await wheather.getLocationWeather();
+                      updateUI(wheatherData);
+                    },
                     child: Icon(
                       Icons.near_me,
                       size: 50.0,
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () async {
+                      var name = await Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return CityScreen();
+                          },
+                        ),
+                      );
+                      if (name != null) {
+                        var cityWeather = await wheather.getCityWeather(name);
+                        updateUI(cityWeather);
+                        print(cityWeather);
+                      }
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
