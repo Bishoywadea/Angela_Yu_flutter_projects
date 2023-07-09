@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'coin_data.dart';
 import 'dart:convert';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class PriceScreen extends StatefulWidget {
   @override
@@ -32,6 +33,13 @@ class _PriceScreenState extends State<PriceScreen> {
     var dataOfLTC = await coinDate.internet('LTC', selectedChoice);
 
     setState(() {
+      if (dataOfBit == -1) {
+        Alert(
+                context: context,
+                title: "Sorry!",
+                desc: "You Have excedded the limits!")
+            .show();
+      }
       costOfBit = dataOfBit['rate'];
       costOfETH = dataOfETH['rate'];
       costOfLTC = dataOfLTC['rate'];

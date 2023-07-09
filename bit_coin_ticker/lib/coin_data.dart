@@ -1,7 +1,7 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
-const apiKey = '2909A105-39C6-4D86-8347-259AC0A02A4B';
+const apiKey = '2615BDEA-2286-4A71-9E4F-7380B4AF0F93';
 
 const List<String> currenciesList = [
   'AUD',
@@ -43,8 +43,6 @@ class CoinData {
           convert.jsonDecode(response.body) as Map<String, dynamic>;
       return jsonResponse;
     } else {
-      print(response.body);
-      print('cant');
       return -1;
     }
   }
