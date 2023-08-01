@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "914291213470",
+    "project_id": "flashchat13-b09bc",
+    "storage_bucket": "flashchat13-b09bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914291213470:android:1385df0231641f38c3278f",
+        "android_client_info": {
+          "package_name": "com.example.flash_chat1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914291213470-hr18963lhc7jdpsl471bmulerho3urol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu3bCbq67ymLXWyxV1stiFnokBiu9Dtn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914291213470-hr18963lhc7jdpsl471bmulerho3urol.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "914291213470-ndmai2krm1vag33g47l0qfos48jucbc9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flashChat1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914291213470:android:430ff4865ad046abc3278f",
+        "android_client_info": {
+          "package_name": "com.example.flash_chat2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914291213470-hr18963lhc7jdpsl471bmulerho3urol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu3bCbq67ymLXWyxV1stiFnokBiu9Dtn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914291213470-hr18963lhc7jdpsl471bmulerho3urol.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "914291213470-ndmai2krm1vag33g47l0qfos48jucbc9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flashChat1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
